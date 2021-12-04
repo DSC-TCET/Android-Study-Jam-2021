@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.util.Log
 
 
-class MainActivity : AppCompatActivity() {
+class LifeCycleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
         Log.d("lifecycle", "onStop called")
     }
-
+// open app again and see
     override fun onRestart() {
         super.onRestart()
         Log.d("lifecycle", "onRestart called")
@@ -42,6 +42,3 @@ class MainActivity : AppCompatActivity() {
         Log.d("lifecycle", "onDestroy called")
     }
 }
-
-
-//onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy()
